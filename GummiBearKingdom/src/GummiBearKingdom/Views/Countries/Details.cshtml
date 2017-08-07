@@ -1,0 +1,21 @@
+﻿@model GummiBearKingdom.Models.Country
+
+@{
+    ViewData["Title"] = "Country Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<hr />
+@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
+
+<h4>Products from this country</h4>
+<ul>
+    @foreach (var product in Model.Products)
+    {
+        <li>@Html.ActionLink(@product.Name, "Details", "Products", new { id = product.ProductId })</li>
+    }
+</ul>
+
+
+<p>@Html.ActionLink("Back to list view", "Index")</p>

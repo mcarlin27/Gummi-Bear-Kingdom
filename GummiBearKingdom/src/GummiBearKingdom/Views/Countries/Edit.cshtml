@@ -1,0 +1,23 @@
+﻿@model GummiBearKingdom.Models.Country
+
+@{
+    ViewData["Title"] = "Edit Country";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+<hr />
+<h4>Edit this Country: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.CountryId)
+
+    <p>
+        @Html.LabelFor(model => model.Name)
+        @Html.EditorFor(model => model.Name)
+    </p>
+
+    <input type="submit" value="Save" />
+}
+<p>@Html.ActionLink("Back to list view", "Index")</p>

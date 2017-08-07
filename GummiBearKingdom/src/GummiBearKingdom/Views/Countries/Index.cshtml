@@ -1,0 +1,20 @@
+﻿@model IEnumerable<GummiBearKingdom.Models.Country>
+
+@{
+    ViewData["Title"] = "Countrys";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Gummi Bear Kingdom</h2>
+<ul>
+    @foreach (var listCountry in Model)
+    {
+        <li>
+            @Html.DisplayFor(modelLocation => listCountry.Name) |
+            @Html.ActionLink("Details", "Details", new { id = listCountry.CountryId }) |
+            @Html.ActionLink("Edit", "Edit", new { id = listCountry.CountryId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = listCountry.CountryId })
+        </li>
+    }
+</ul>
+<p>@Html.ActionLink("Add new country", "Create")</p>

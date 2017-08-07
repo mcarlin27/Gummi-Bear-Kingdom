@@ -1,0 +1,20 @@
+﻿@model GummiBearKingdom.Models.Country
+@{
+    ViewData["Title"] = "Create Country";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Create Country</h2>
+<hr />
+<h4>Add a new Country</h4>
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name)
+    </p>
+
+    <input type="submit" value="Add a new Country" />
+}
+<p>@Html.ActionLink("Back to list view", "Index")</p>
