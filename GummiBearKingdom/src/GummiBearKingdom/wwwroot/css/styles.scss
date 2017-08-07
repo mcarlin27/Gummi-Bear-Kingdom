@@ -1,0 +1,67 @@
+﻿body {
+  background-color: #FDFDFF;
+}
+
+.navbar {
+  background-color: #702923;
+  width: 100vw;
+  margin-top: -8px;
+  margin-left: -8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  height: 50px;
+  a {
+    font-family: 'Zilla Slab', serif;
+    text-decoration: none;
+    font-size: 20px;
+    color: #FDFDFF;
+  }
+  ul {
+    flex-direction: row;
+    display: flex;
+    li {
+      margin: 0px 20px;
+      list-style-type: none;
+    }
+  }
+}
+
+.navbar {
+  ul {
+    li {
+      a:hover {
+        color: #393D3F;
+      }
+    }
+  }
+}
+
+.container {
+  .header {
+    width: 100vw;
+    margin-left: -8px;
+    display: flex;
+    height: 500px;
+    background-image: url('./../assets/img/husky-hiking.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .header-opaque {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.2);
+      h1 {
+        color: #E16E5E;
+        font-size: 100px;
+        font-family: 'Kadwa', serif;
+        text-align: center;
+        text-shadow: 5px 5px black;
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/styles.css" rel="stylesheet" type="text/css" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
@@ -12,16 +13,16 @@
             <div class="navbar-header">
                 <ul class="nav navbar-nav">
                     <li>
-                        @Html.ActionLink("GummiBearKingdom", "Index", "Home")
+                        <a href="/" id="haribo"><img src="~/images/Haribo_logo.jpg" /></a>
                     </li>
                 </ul>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    @Html.ActionLink("Products", "Index", "Products")
+                <li class="li-nav">
+                    <a href="products">PRODUCTS</a>
                 </li>
-                <li>
-                    @Html.ActionLink("Countries", "Index", "Countries")
+                <li class="li-nav">
+                    @Html.ActionLink("COUNTRIES", "Index", "Countries")
                 </li>
             </ul>
         </div>
