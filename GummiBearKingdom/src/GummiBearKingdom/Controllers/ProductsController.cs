@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using GummiBearKingdom.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
 
 namespace GummiBearKingdom.Controllers
 {
@@ -26,9 +27,10 @@ namespace GummiBearKingdom.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(Product product)
+        public IActionResult Create(Product product, Country country)
         {
             db.Products.Add(product);
+            db.Countries.Add(country);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
