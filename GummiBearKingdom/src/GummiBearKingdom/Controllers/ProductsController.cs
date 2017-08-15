@@ -23,8 +23,15 @@ namespace GummiBearKingdom.Controllers
         }
         public IActionResult Create()
         {
-            ViewBag.CountryId = new SelectList(db.Countries, "CountryId", "Name");
-            return View();
+            if (db.Countries.Count() == 0)
+            {
+                return RedirectToAction("Create", "Countries");
+            }
+            else
+            {
+                ViewBag.CountryId = new SelectList(db.Countries, "CountryId", "Name");
+                return View();
+            }
         }
         [HttpPost]
         public IActionResult Create(Product product, Country country)

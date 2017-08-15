@@ -7,20 +7,12 @@
 
 <h2>Create Product</h2>
 <hr />
-<h2>@ViewBag.CountryId</h2>
 <h4>Add a new Product</h4>
 @using (Html.BeginForm())
 {
     <p>
-        @if (Html.DropDownList("CountryId") == null)
-        {
-            @Html.Label("Country")
-            @Html.DropDownList("CountryId")
-        }
-        else
-        {
-            <h3>@Html.ActionLink("Please Add a Country of Origin first", "Create", "Countries")</h3>
-        }
+        @Html.Label("Country")
+        @Html.DropDownList("CountryId")
     </p>
 
     <p>
@@ -32,7 +24,6 @@
         @Html.LabelFor(model => model.Cost)
         @Html.TextBoxFor(model => model.Cost)
     </p>
-
 
     <input type="submit" value="Add a new product" />
 }
