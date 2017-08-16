@@ -4,6 +4,7 @@ using System.Linq;
 using GummiBearKingdom.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
+using System;
 
 namespace GummiBearKingdom.Controllers
 {
@@ -33,6 +34,7 @@ namespace GummiBearKingdom.Controllers
                 return View();
             }
         }
+
         [HttpPost]
         public IActionResult Create(Product product)
         {
