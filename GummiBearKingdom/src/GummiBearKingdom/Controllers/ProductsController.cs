@@ -34,10 +34,9 @@ namespace GummiBearKingdom.Controllers
             }
         }
         [HttpPost]
-        public IActionResult Create(Product product, Country country)
+        public IActionResult Create(Product product)
         {
             db.Products.Add(product);
-            db.Countries.Add(country);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
