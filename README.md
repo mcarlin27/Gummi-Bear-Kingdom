@@ -21,9 +21,8 @@ A website created with C#, .Net Core, and HTML where a user can add/read/update/
 ## Setup/Installation Requirements
 1. To run this project you must have [Visual Studio 2015](https://www.visualstudio.com/downloads/) and [SQL SSMS](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) installed on your machine.
 2. Clone this repository.
-3. Navigate into the GummiBearKingdom directory in Powershell and run the command "dotnet ef migrations add Initial".
-7. Then run "dotnet ef database update".
-9. Open the project in Visual Studio and click the green arrow button, marked "IIS Express" to run the program.
+3. Navigate into the GummiBearKingdom directory in Powershell and run the command "dotnet ef database update".
+4. Open the project in Visual Studio and click the green arrow button, marked "IIS Express" to run the program.
 
 ## Known Bugs
 None at this time
